@@ -1,0 +1,17 @@
+# simple_interest.py
+
+# Define the principal amount, annual interest rate (as a decimal), and time in years
+principal = 1000
+rate = 0.05
+time = 3
+
+# Calculate the simple interest using the formula I = P * R * T
+# I = Interest earned
+# P = Principal amount (initial investment)
+# R = Annual interest rate (as a decimal)
+# T = Time the money is invested for in years
+interest = principal * rate * time
+
+# Print the calculated interest in the specified format
+# The f-string allows for easy embedding of variable values into the output string
+print(f"The simple interest is: {interest}") 
