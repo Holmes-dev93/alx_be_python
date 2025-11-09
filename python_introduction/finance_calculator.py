@@ -1,25 +1,23 @@
-5. Personal Finance Calculator
-#advanced
-Objective: Use user input, variables, and arithmetic operations to calculate and provide feedback on a user’s monthly savings and potential future savings without applying conditional statements.
+# Objective: Calculate the user's age in the year 2050 using user input.
+# Directory: python_introduction/
+# File: future_age_calculator.py
 
-Task Description:
+# 1. Define the difference between 2050 and the assumed current year (2023)
+YEARS_TO_ADD = 27
 
-You will create a script named finance_calculator.py. This script will calculate the user’s monthly savings based on inputted monthly income and expenses. It will then project these savings over a year, assuming a fixed interest rate, to demonstrate compound interest’s effect on savings.
+# 2. Prompt the user for their current age and capture the input.
+# The input() function returns a string, so we must convert it to an integer (int())
+# to perform the calculation.
+try:
+    current_age_str = input("How old are you? ")
+    current_age = int(current_age_str)
 
-Instructions:
+    # 3. Calculate the future age
+    future_age = current_age + YEARS_TO_ADD
 
-User Input for Financial Details:
+    # 4. Print the result in the required format
+    print(f"In 2050, you will be {future_age} years old.")
 
-Prompt the user for their monthly income: “Enter your monthly income: ”.
-Ask for their total monthly expenses: “Enter your total monthly expenses: ”.
-Calculate Monthly Savings:
-
-Calculate the monthly savings by subtracting monthly expenses from the monthly income.
-Project Annual Savings:
-
-Assume a simple annual interest rate of 5%.
-Calculate the projected savings after one year, incorporating the interest. Use the simplified formula for annual savings projection: (Projected Savings = Monthly Savings * 12 + (Monthly Savings * 12 * 0.05)).
-Output Results:
-
-Display the user’s monthly savings.
-Display the projected annual savings after including interest.
+except ValueError:
+    # Basic error handling in case the user enters non-numeric input
+    print("Invalid input. Please enter a whole number for your age.")
